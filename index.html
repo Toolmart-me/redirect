@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting to Stores </title>
+    <script>
+
+        // Detect device
+        const isAndroid = /Android/i.test(navigator.userAgent);
+        const isiOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+
+
+        // If app fails to open, redirect to store after delay
+        setTimeout(function() {
+            if (isAndroid) {
+                window.location = "https://play.google.com/store/apps/details?id=me.toolmart&hl=en";
+            } else if (isiOS) {
+                window.location = "https://apps.apple.com/uy/app/toolmart-hardware-online-shop/id1609782724";
+            } else {
+                window.location = "https://toolmart.me"; // Fallback for desktop
+            }
+        }, 100); // 800ms delay (adjust if needed)
+    </script>
+</head>
+<body>
+<p>Redirecting to the stores </p>
+</body>
+</html>
